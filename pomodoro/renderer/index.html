@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>番茄钟</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Title bar -->
+  <div class="title-bar">
+    <span class="title-bar-text">番茄钟</span>
+    <div class="title-bar-actions">
+      <button class="title-btn" id="btn-pin" title="置顶">&#128205;</button>
+      <button class="title-btn" id="btn-min" title="最小化">&minus;</button>
+      <button class="title-btn" id="btn-close" title="关闭">&times;</button>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="container">
+    <!-- Mode indicator -->
+    <div class="mode-badge" id="mode-badge">聚焦</div>
+
+    <!-- Timer ring -->
+    <div class="timer-ring">
+      <svg viewBox="0 0 200 200" class="progress-ring">
+        <circle class="progress-ring-bg" cx="100" cy="100" r="90" />
+        <circle class="progress-ring-fill" id="progress-circle" cx="100" cy="100" r="90" />
+      </svg>
+      <div class="timer-text" id="timer-text">25:00</div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn btn-primary" id="btn-start">开始</button>
+      <button class="btn btn-secondary" id="btn-reset">重置</button>
+    </div>
+
+    <!-- Pomodoro dots -->
+    <div class="pomodoro-dots" id="pomodoro-dots">
+      <span class="dot filled"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <div class="today-count">今日完成: <span id="today-count">0</span></div>
+
+    <!-- Duration selector -->
+    <div class="duration-selector">
+      <span class="duration-label">时长:</span>
+      <button class="duration-btn" data-min="15">15</button>
+      <button class="duration-btn active" data-min="25">25</button>
+      <button class="duration-btn" data-min="30">30</button>
+      <button class="duration-btn" data-min="45">45</button>
+    </div>
+  </div>
+
+  <script src="timer.js"></script>
+</body>
+</html>

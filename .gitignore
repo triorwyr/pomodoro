@@ -1,0 +1,4 @@
+node_modules/
+.electron-data/
+.npm_cache/
+.claude/
